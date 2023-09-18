@@ -1,0 +1,26 @@
+proxies:
+  - name: "🚗 Whistle"
+    type: http # 或 socks5，视你的本地代理类型而定
+    server: 127.0.0.1
+    port: 8899
+proxy-groups:
+  - name: "🛸 本地代理"
+    type: select
+    proxies:
+      - "🚗 Whistle"
+      - DIRECT
+rules:
+  - DOMAIN-SUFFIX,yaotai-local-dev.cloudgame.danlu.netease.com,🛸 本地代理
+  - DOMAIN-SUFFIX,yaotai-local-qa.cloudgame.danlu.netease.com,🛸 本地代理
+  - DOMAIN-SUFFIX,yaotai-local-uat.cloudgame.danlu.netease.com,🛸 本地代理
+  - DOMAIN-SUFFIX,yaotai-local-uat2.cloudgame.danlu.netease.com,🛸 本地代理
+  - DOMAIN-SUFFIX,yaotai-local-uat3.cloudgame.danlu.netease.com,🛸 本地代理
+  - DOMAIN-SUFFIX,yaotai-local-uat4.cloudgame.danlu.netease.com,🛸 本地代理
+  - DOMAIN-SUFFIX,yaotai-local-uat5.cloudgame.danlu.netease.com,🛸 本地代理
+  - DOMAIN-SUFFIX,yaotai-local-uat6.cloudgame.danlu.netease.com,🛸 本地代理
+  - DOMAIN-SUFFIX,yaotai-local-uat7.cloudgame.danlu.netease.com,🛸 本地代理
+  - DOMAIN-SUFFIX,yaotai-local-uat8.cloudgame.danlu.netease.com,🛸 本地代理
+  - DOMAIN-SUFFIX,yaotai-local-henan.cloudgame.danlu.netease.com,🛸 本地代理
+  - DOMAIN-SUFFIX,yaotai-local-dianxin.cloudgame.danlu.netease.com,🛸 本地代理
+  - DOMAIN-SUFFIX,yaotai-local-lingjiajia.cloudgame.danlu.netease.com,🛸 本地代理
+  - DOMAIN-SUFFIX,yaotai-local-jxjk.cloudgame.danlu.netease.com,🛸 本地代理
